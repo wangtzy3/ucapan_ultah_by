@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+</head>
+<body style="background-image: url(https://images.unsplash.com/photo-1531246367433-a51680fcb90f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D);background-size: cover; "class="flex justify-center h-screen items-center"
+class="flex justify-center h-screen items-center"
+>
+ <audio src="i mean it.mp3" autoplay loop></audio>
+
+
+
+<div class="bg-white border px-10 py-8 border-4 border-gray-400 shadow-lg shadow-pink-400 rounded-xl text-center animate__animated animate__backInDown m-8 w-80" id="kartu">
+    <h1 class="text-3xl font-bold">Happy Birthday
+    </h1>
+    <h1 id="nama" class="text-4xl text-pink-400 font-bold animate__animated animate__tada animate__delay-1s ">Syifa Eliza
+    </h1>
+    <button class="p-2 bg-pink-400 text-white rounded-xl mt-5 hover:bg-pink-700 transition ease-in w-full animate__animated animate__delay-1s animate__tada"onclick="ubahKartu()">klik Disini
+    </button>
+</div>   
+
+<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script>
+      const defaults = {
+  spread: 360,
+  ticks: 100,
+  gravity: 0,
+  decay: .94,
+  startVelocity: 30,
+  shapes: ["heart"],
+  colors: [
+    "FFC0CB",
+    "FF69B4",
+    "FF1493",
+    "C71585"
+  ]
+};
+confetti({
+  ...defaults,
+  particleCount: 50,
+  scalar: 2
+});
+confetti({
+  ...defaults,
+  particleCount: 25,
+  scalar: 3
+});
+confetti({
+  ...defaults,
+  particleCount: 10,
+  scalar: 4
+});
+let kartu = document.getElementById("kartu");
+function ubahKartu() {
+        kartu.innerHTML = `    <h1 class="font-semibold text-wrap animate__animated animate__zoomInDown">
+      Hai Syifa, selamat ulang tahun yang ke 18 ya, Semoga diumur kamu yang ke 18 ini, banyak hal baik yang datang ke kamu,cita cita yang kamu inginkan bisa segra tercapai, selalu diberi kesehatan, kebahagiaan, dan dikelilingi orang orang baik disekitarmu. Jangan lupa keluar kelas agar aku bisa melihat mu(canda btw). Semoga hari hari mu menyenangkan terus yah. Aku mungkin nggak bisa kasih sesuatu yang spesial dan kamu gak kenal siapa aku,tapi aku harap kamu selalu mengingat kado ini.mungkin kita bisa kenalan kapan kapan mumpung masih SMA?. Once again, Happy Birthday Liza🎂
+    </h1>
+    <h2 id="pengirim" class="mt-3 animate__animated animate__backInDown animate__delay-3s font-bold text-pink-500">
+    - from : Anomali smapan👀 -
+</h2>
+<button class="p-2 bg-pink-400 text-white rounded-xl mt-5 hover:bg-pink-700 transition ease-in w-full animate__animated animate__delay-1s animate__tada"onclick="refresh()">kembali
+</button>
+    `;
+
+    
+      }
+      function refresh(){
+        location.reload();
+    }
+</script>
+ <script>
+    const nama = document.getElementById("nama");
+    nama.addEventListener("animationend", () => {
+      nama.classList.remove("animate__tada");
+      nama.classList.add("animate__pulse", "animate__infinite");
+    });
+  </script>
+
+   
+
+
+</body>
+</html>
